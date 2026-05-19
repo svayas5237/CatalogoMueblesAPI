@@ -3,22 +3,22 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DbContext con SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// CORS para Vite React (puerto 5173)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVite", policy =>
     {
-        policy.WithOrigins("http://localhost:5173")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.WithOrigins(
+            "http://localhost:5173",
+            "https://ecologymuebles-frontend.azurestaticapps.net"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
-// Límite de tamaño para subida de fotos (50MB)
 builder.Services.Configure<IISServerOptions>(options =>
 {
     options.MaxRequestBodySize = 52428800;
@@ -29,7 +29,6 @@ builder.WebHost.ConfigureKestrel(options =>
     options.Limits.MaxRequestBodySize = 52428800;
 });
 
-// Controladores con manejo de ciclos JSON
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler =
@@ -42,16 +41,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowVite");
 
-// Crear carpetas wwwroot e imagenes si no existen
 var wwwrootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
 Directory.CreateDirectory(wwwrootPath);
 Directory.CreateDirectory(Path.Combine(wwwrootPath, "imagenes"));
@@ -60,3 +55,6 @@ app.UseStaticFiles();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+   
+
+
