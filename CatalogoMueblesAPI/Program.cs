@@ -10,12 +10,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVite", policy =>
     {
-        policy.WithOrigins(
-            "http://localhost:5173",
-            "https://thankful-hill-03b223b0f.7.azurestaticapps.net"
-        )
-        .AllowAnyHeader()
-        .AllowAnyMethod();
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
     });
 });
 
@@ -43,7 +40,6 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.UseHttpsRedirection();
 app.UseCors("AllowVite");
 
@@ -55,6 +51,3 @@ app.UseStaticFiles();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
-   
-
-
