@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:5173",
-            "https://thankful-hill-03b223b0f7.azurestaticapps.net"
+            "https://thankful-hill-03b223b0f.7.azurestaticapps.net"
         )
         .AllowAnyHeader()
         .AllowAnyMethod();
