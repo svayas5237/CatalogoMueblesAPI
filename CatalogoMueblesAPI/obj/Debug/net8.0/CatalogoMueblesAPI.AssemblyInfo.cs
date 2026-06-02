@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CatalogoMueblesAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f80b7f38d3e88ac8afe9516ddef2a2643bc0f3c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87bf3e14cb580c32efc9e253350c933f670922b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CatalogoMueblesAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CatalogoMueblesAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
