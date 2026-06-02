@@ -4,13 +4,21 @@ public class VentaDto
 {
     public int IdCliente { get; set; }
     public int IdUsuario { get; set; }
+
+    public string? FacturacionNombre { get; set; }
+    public string? FacturacionApellido { get; set; }
+    public string? FacturacionCedula { get; set; }
+    public string? FacturacionTelefono { get; set; }
+    public string? FacturacionDireccion { get; set; }
+
+    public string? EnvioNombre { get; set; }
+    public string? EnvioApellido { get; set; }
+    public string? EnvioTelefono { get; set; }
+    public string? EnvioDireccion { get; set; }
+    public string? EnvioLinkMaps { get; set; }
+
+    public string? UrlComprobante { get; set; }
+
     public List<DetalleVentaDto> Detalles { get; set; } = new();
 }
 
-public class DetalleVentaDto
-{
-    public int IdProducto { get; set; }
-    public int Cantidad { get; set; }
-    public decimal PrecioUnitario { get; set; }
-    public decimal Subtotal { get; set; }
-}

@@ -29,6 +29,9 @@ builder.WebHost.ConfigureKestrel(options =>
     options.Limits.MaxRequestBodySize = 52428800;
 });
 
+builder.Services.AddControllers().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
+
 // Controladores con manejo de ciclos JSON
 builder.Services.AddControllers().AddJsonOptions(options =>
 {

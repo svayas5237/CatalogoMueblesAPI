@@ -342,6 +342,47 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CatalogoMueblesAPI.Controllers.DetalleVentaController",
+    "Method": "GetDetalles",
+    "RelativePath": "api/DetalleVenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CatalogoMueblesAPI.Models.DetalleVenta, CatalogoMueblesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CatalogoMueblesAPI.Controllers.DetalleVentaController",
+    "Method": "PutDetalleVenta",
+    "RelativePath": "api/DetalleVenta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "detalleDto",
+        "Type": "CatalogoMueblesAPI.DTOs.DetalleVentaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CatalogoMueblesAPI.Controllers.InventariosController",
     "Method": "GetInventarios",
     "RelativePath": "api/Inventarios",
@@ -389,32 +430,6 @@
   },
   {
     "ContainingType": "CatalogoMueblesAPI.Controllers.InventariosController",
-    "Method": "GetInventario",
-    "RelativePath": "api/Inventarios/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CatalogoMueblesAPI.Models.Inventario",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CatalogoMueblesAPI.Controllers.InventariosController",
     "Method": "PutInventario",
     "RelativePath": "api/Inventarios/{id}",
     "HttpMethod": "PUT",
@@ -436,14 +451,14 @@
   },
   {
     "ContainingType": "CatalogoMueblesAPI.Controllers.InventariosController",
-    "Method": "GetPorProducto",
-    "RelativePath": "api/Inventarios/producto/{idProducto}",
+    "Method": "GetInventario",
+    "RelativePath": "api/Inventarios/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idProducto",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -451,26 +466,6 @@
     "ReturnTypes": [
       {
         "Type": "CatalogoMueblesAPI.Models.Inventario",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CatalogoMueblesAPI.Controllers.InventariosController",
-    "Method": "GetStockBajo",
-    "RelativePath": "api/Inventarios/stock-bajo",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CatalogoMueblesAPI.Models.Inventario, CatalogoMueblesAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1245,6 +1240,32 @@
     "ReturnTypes": [
       {
         "Type": "CatalogoMueblesAPI.Models.Venta",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CatalogoMueblesAPI.Controllers.VentasController",
+    "Method": "GetMisComprasSeguro",
+    "RelativePath": "api/Ventas/mis-compras/{correo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "correo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

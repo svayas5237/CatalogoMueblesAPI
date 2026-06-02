@@ -592,6 +592,86 @@
         }
       }
     },
+    "/api/DetalleVenta": {
+      "get": {
+        "tags": [
+          "DetalleVenta"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DetalleVenta"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DetalleVenta"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DetalleVenta"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DetalleVenta/{id}": {
+      "put": {
+        "tags": [
+          "DetalleVenta"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DetalleVentaDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DetalleVentaDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DetalleVentaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Inventarios": {
       "get": {
         "tags": [
@@ -677,44 +757,6 @@
       }
     },
     "/api/Inventarios/{id}": {
-      "get": {
-        "tags": [
-          "Inventarios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Inventario"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Inventario"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Inventario"
-                }
-              }
-            }
-          }
-        }
-      },
       "put": {
         "tags": [
           "Inventarios"
@@ -754,16 +796,14 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/Inventarios/producto/{idProducto}": {
+      },
       "get": {
         "tags": [
           "Inventarios"
         ],
         "parameters": [
           {
-            "name": "idProducto",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -789,44 +829,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Inventario"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Inventarios/stock-bajo": {
-      "get": {
-        "tags": [
-          "Inventarios"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Inventario"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Inventario"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Inventario"
-                  }
                 }
               }
             }
@@ -2217,6 +2219,48 @@
         }
       }
     },
+    "/api/Ventas/mis-compras/{correo}": {
+      "get": {
+        "tags": [
+          "Ventas"
+        ],
+        "parameters": [
+          {
+            "name": "correo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -2513,6 +2557,15 @@
             "type": "number",
             "format": "double"
           },
+          "entregado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaEntrega": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
           "venta": {
             "$ref": "#/components/schemas/Venta"
           },
@@ -2540,6 +2593,19 @@
           "subtotal": {
             "type": "number",
             "format": "double"
+          },
+          "idDetalle": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "entregado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaEntrega": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2572,6 +2638,10 @@
       "InventarioDto": {
         "type": "object",
         "properties": {
+          "idInventario": {
+            "type": "integer",
+            "format": "int32"
+          },
           "idProducto": {
             "type": "integer",
             "format": "int32"
@@ -3098,6 +3168,50 @@
             "type": "number",
             "format": "double"
           },
+          "facturacionNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionApellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionCedula": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionTelefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionDireccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioApellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioTelefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioDireccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioLinkMaps": {
+            "type": "string",
+            "nullable": true
+          },
+          "urlComprobante": {
+            "type": "string",
+            "nullable": true
+          },
           "cliente": {
             "$ref": "#/components/schemas/Cliente"
           },
@@ -3124,6 +3238,50 @@
           "idUsuario": {
             "type": "integer",
             "format": "int32"
+          },
+          "facturacionNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionApellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionCedula": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionTelefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "facturacionDireccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioApellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioTelefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioDireccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "envioLinkMaps": {
+            "type": "string",
+            "nullable": true
+          },
+          "urlComprobante": {
+            "type": "string",
+            "nullable": true
           },
           "detalles": {
             "type": "array",

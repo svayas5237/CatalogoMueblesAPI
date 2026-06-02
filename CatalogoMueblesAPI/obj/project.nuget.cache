@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lrPtDL7khy8=",
+  "dgSpecHash": "jiyysPhNqyM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MSI\\Documents\\.DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\.PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj",
+  "projectFilePath": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MSI\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

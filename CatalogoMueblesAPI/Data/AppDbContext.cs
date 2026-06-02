@@ -6,7 +6,7 @@ namespace CatalogoMueblesAPI.Data;
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-
+    public DbSet<DetalleVenta> DetallesVenta { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Producto> Productos { get; set; }
@@ -17,7 +17,6 @@ public class AppDbContext : DbContext
     public DbSet<Carrito> Carritos { get; set; }
     public DbSet<CarritoDetalle> CarritoDetalles { get; set; }
     public DbSet<Venta> Ventas { get; set; }
-    public DbSet<DetalleVenta> DetallesVenta { get; set; }
     public DbSet<ProductoDetalle> ProductoDetalles { get; set; }
     public DbSet<ProductoDetalleImagen> ProductoDetalleImagenes { get; set; }
     public DbSet<UsuarioPermiso> UsuarioPermisos { get; set; }
@@ -147,6 +146,34 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Venta>()
             .Property(v => v.Total).HasColumnName("total");
 
+        // Mapeo de campos de Facturación
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.FacturacionNombre).HasColumnName("facturacion_nombre");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.FacturacionApellido).HasColumnName("facturacion_apellido");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.FacturacionCedula).HasColumnName("facturacion_cedula");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.FacturacionTelefono).HasColumnName("facturacion_telefono");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.FacturacionDireccion).HasColumnName("facturacion_direccion");
+
+        // Mapeo de campos de Envío
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.EnvioNombre).HasColumnName("envio_nombre");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.EnvioApellido).HasColumnName("envio_apellido");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.EnvioTelefono).HasColumnName("envio_telefono");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.EnvioDireccion).HasColumnName("envio_direccion");
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.EnvioLinkMaps).HasColumnName("envio_link_maps");
+
+        // Mapeo del archivo de Comprobante
+        modelBuilder.Entity<Venta>()
+            .Property(v => v.UrlComprobante).HasColumnName("url_comprobante");
+
         // DETALLE VENTA
         modelBuilder.Entity<DetalleVenta>()
             .Property(dv => dv.IdDetalle).HasColumnName("id_detalle");
@@ -160,6 +187,26 @@ public class AppDbContext : DbContext
             .Property(dv => dv.PrecioUnitario).HasColumnName("precio_unitario");
         modelBuilder.Entity<DetalleVenta>()
             .Property(dv => dv.Subtotal).HasColumnName("subtotal");
+
+        // DETALLE VENTA
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.IdDetalle).HasColumnName("id_detalle");
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.IdVenta).HasColumnName("id_venta");
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.IdProducto).HasColumnName("id_producto");
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.Cantidad).HasColumnName("cantidad");
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.PrecioUnitario).HasColumnName("precio_unitario");
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.Subtotal).HasColumnName("subtotal");
+
+        // --- AGREGA ESTO ---
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.Entregado).HasColumnName("entregado");
+        modelBuilder.Entity<DetalleVenta>()
+            .Property(dv => dv.FechaEntrega).HasColumnName("fecha_entrega");
 
         // PRODUCTO DETALLE
         modelBuilder.Entity<ProductoDetalle>()
