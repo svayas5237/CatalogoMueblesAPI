@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|c:\\users\\msi\\documents\\desarrollo del proyecto\\ecology muebles\\proyecto final\\backend\\catalogomueblesapi\\catalogomueblesapi\\controllers\\detalleventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|solutionrelative:catalogomueblesapi\\controllers\\detalleventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|c:\\users\\msi\\documents\\desarrollo del proyecto\\ecology muebles\\proyecto final\\backend\\catalogomueblesapi\\catalogomueblesapi\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|solutionrelative:catalogomueblesapi\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|c:\\users\\msi\\documents\\desarrollo del proyecto\\ecology muebles\\proyecto final\\backend\\catalogomueblesapi\\catalogomueblesapi\\dtos\\detalleventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|solutionrelative:catalogomueblesapi\\dtos\\detalleventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|c:\\users\\msi\\documents\\desarrollo del proyecto\\ecology muebles\\proyecto final\\backend\\catalogomueblesapi\\catalogomueblesapi\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F5C7B3E-4845-40E4-AA72-F94FE8490037}|CatalogoMueblesAPI\\CatalogoMueblesAPI.csproj|solutionrelative:catalogomueblesapi\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DetalleVentaController.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\Controllers\\DetalleVentaController.cs",
-              "RelativeDocumentMoniker": "CatalogoMueblesAPI\\Controllers\\DetalleVentaController.cs",
-              "ToolTip": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\Controllers\\DetalleVentaController.cs",
-              "RelativeToolTip": "CatalogoMueblesAPI\\Controllers\\DetalleVentaController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAADUAAAANAAAAAAAAAA==",
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "CatalogoMueblesAPI\\Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\Models\\Venta.cs",
+              "RelativeToolTip": "CatalogoMueblesAPI\\Models\\Venta.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswCQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:26:41.534Z",
+              "WhenOpened": "2026-06-02T19:07:16.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DetalleVentaDto.cs",
-              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\DTOs\\DetalleVentaDto.cs",
-              "RelativeDocumentMoniker": "CatalogoMueblesAPI\\DTOs\\DetalleVentaDto.cs",
-              "ToolTip": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\DTOs\\DetalleVentaDto.cs",
-              "RelativeToolTip": "CatalogoMueblesAPI\\DTOs\\DetalleVentaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Title": "VentasController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\Controllers\\VentasController.cs",
+              "RelativeDocumentMoniker": "CatalogoMueblesAPI\\Controllers\\VentasController.cs",
+              "ToolTip": "C:\\Users\\MSI\\Documents\\DESARROLLO DEL PROYECTO\\ECOLOGY MUEBLES\\PROYECTO FINAL\\BACKEND\\CatalogoMueblesAPI\\CatalogoMueblesAPI\\Controllers\\VentasController.cs",
+              "RelativeToolTip": "CatalogoMueblesAPI\\Controllers\\VentasController.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAuwKEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:24:30.095Z"
+              "WhenOpened": "2026-06-02T19:02:27.497Z",
+              "EditorCaption": ""
             }
           ]
         }
